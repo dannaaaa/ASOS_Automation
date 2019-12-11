@@ -19,8 +19,8 @@ public class ASOSSiteTest {
         asosSite = new ASOSSite(chromeDriverConfig.getDriver());
 
         asosSite.asosHomepage().goToHomepage();
-       // asosSite.asosDresses().clickOnClothing().goToDresses();
-        asosSite.asosAccount().clickMyAccount();
+        asosSite.asosDresses().clickOnClothing().goToDresses().goToEveningDresses().selectDress().selectSize();
+        //asosSite.asosAccount().goToLogInPage();
 
 
     }
