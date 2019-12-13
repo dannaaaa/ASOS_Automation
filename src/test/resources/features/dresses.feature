@@ -1,5 +1,7 @@
 Feature : Dresses
 
+
+/*  Dress scenario 1 */
   Scenario: looking at dresses
     Given I am on the homepage
     When I click on clothing

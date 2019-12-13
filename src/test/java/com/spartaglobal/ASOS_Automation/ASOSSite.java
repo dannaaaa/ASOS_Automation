@@ -1,6 +1,6 @@
 package com.spartaglobal.ASOS_Automation;
 
-import com.spartaglobal.ASOS_Automation.Pages.ASOSAccount;
+import com.spartaglobal.ASOS_Automation.Pages.ASOSSignIn;
 import com.spartaglobal.ASOS_Automation.Pages.ASOSDresses;
 import com.spartaglobal.ASOS_Automation.Pages.ASOSHomepage;
 import org.openqa.selenium.WebDriver;
@@ -10,6 +10,7 @@ public class ASOSSite {
     private WebDriver driver;
     private ASOSHomepage asosHomepage;
     private ASOSDresses asosDresses;
+    private ASOSSignIn asosSignIn;
 
     public ASOSSite(WebDriver driver) {
         this.driver = driver;
@@ -17,6 +18,8 @@ public class ASOSSite {
 
         this.asosHomepage = new ASOSHomepage(driver);
         this.asosDresses = new ASOSDresses(driver);
+        this.asosSignIn = new ASOSSignIn(driver);
+
     }
 
     public ASOSHomepage asosHomepage(){
@@ -27,7 +30,7 @@ public class ASOSSite {
         return asosDresses;
     }
 
-    public ASOSAccount asosAccount(){
-        return asosAccount();
+    public ASOSSignIn asosSignIn(){
+        return asosSignIn();
     }
 }
