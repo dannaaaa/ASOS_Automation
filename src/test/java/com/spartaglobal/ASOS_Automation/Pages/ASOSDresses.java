@@ -12,7 +12,8 @@ public class ASOSDresses {
     private By dressLink = By.linkText("Dresses");
     private By eveningDresses = By.xpath("//*[@id=\"category-banner-wrapper\"]/div/div/div[2]/div/div/a[1]");
     private By selectDress = By.xpath("//*[@id=\"product-13024454\"]/a/div[1]/img");
-    Select drpSize = new Select(driver.findElement(By.xpath("//*[@id=\"main-size-select-0\"]")));
+    private By sizeDrpDown = By.xpath("/html/body/main/div[1]/section[1]/div/div[2]/div[4]/div[1]/section/div/div[1]/div[2]/select");
+    private By getSize = By.linkText("UK 12");
     private By addToCartButton = By.xpath("//*[@id=\"product-add\"]/div/a/span[2]");
 
     public ASOSDresses(WebDriver driver) {
@@ -40,7 +41,12 @@ public class ASOSDresses {
     }
 
     public ASOSDresses selectSize(){
-        drpSize.selectByVisibleText("UK 14");
+        driver.findElement(sizeDrpDown).click();
+        return this;
+    }
+
+    public ASOSDresses clickOnSize (){
+        driver.findElement(getSize).click();
         return this;
     }
 

@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 public class SeleniumConfig {
 
-    private WebDriver driver;
+    private static WebDriver driver;
 
     public SeleniumConfig(String browser, String driverPath) {
         if (browser.equalsIgnoreCase("chrome")) {

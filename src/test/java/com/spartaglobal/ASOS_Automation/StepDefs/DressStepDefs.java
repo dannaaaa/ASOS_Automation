@@ -69,25 +69,25 @@ public class DressStepDefs {
         asosSite.asosDresses().clickOnClothing().goToDresses().goToEveningDresses().selectDress();
     }
 
-    @Given("I am on the dress product page")
-    public void iAmOnTheDressProductPage() {
-        String currUrl = chromeDriverConfig.getDriver().getCurrentUrl();
-        Assert.assertEquals("https://www.asos.com/asos-design/asos-design-one-shoulder-tulle-wired-hem-maxi-dress/prd/13024454?clr=forest-green&colourWayId=16526780&SearchQuery=&cid=8857", currUrl);
-    }
-
-    @When("I select a size")
-    public void iSelectASize() {
-        asosSite.asosHomepage().goToHomepage();
-        asosSite.asosDresses().clickOnClothing().goToDresses().goToEveningDresses().selectDress().selectSize();
-    }
-
-    @And("click add to basket")
-    public void clickAddToBasket() {
-        asosSite.asosHomepage().goToHomepage();
-        asosSite.asosDresses().clickOnClothing().goToDresses().goToEveningDresses().selectDress().selectSize().addToBagButton();
-    }
-
-    @Then("my item should be in the basket")
-    public void myItemShouldBeInTheBasket() {
-    }
+//    @Given("I am on the dress product page")
+//    public void iAmOnTheDressProductPage() {
+//        String currUrl = chromeDriverConfig.getDriver().getCurrentUrl();
+//        Assert.assertEquals("https://www.asos.com/asos-design/asos-design-one-shoulder-tulle-wired-hem-maxi-dress/prd/13024454?clr=forest-green&colourWayId=16526780&SearchQuery=&cid=8857", currUrl);
+//    }
+//
+//    @When("I select a size")
+//    public void iSelectASize() {
+//        asosSite.asosHomepage().goToHomepage();
+//        asosSite.asosDresses().clickOnClothing().goToDresses().goToEveningDresses().selectDress().selectSize();
+//    }
+//
+//    @And("click add to basket")
+//    public void clickAddToBasket() {
+//        asosSite.asosHomepage().goToHomepage();
+//        asosSite.asosDresses().clickOnClothing().goToDresses().goToEveningDresses().selectDress().selectSize().addToBagButton();
+//    }
+//
+//    @Then("my item should be in the basket")
+//    public void myItemShouldBeInTheBasket() {
+//    }
 }

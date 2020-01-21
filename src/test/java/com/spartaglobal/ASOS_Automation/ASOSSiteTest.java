@@ -15,11 +15,11 @@ public class ASOSSiteTest {
 
     @BeforeClass
     public static void setup(){
-        SeleniumConfig chromeDriverConfig = new SeleniumConfig("chrome", "C:\\Users\\danaa\\Downloads\\chromedriver_win32\\chromedriver.exe");
+        SeleniumConfig chromeDriverConfig = new SeleniumConfig("chrome", "C:\\Users\\danaa\\Downloads\\chromedriver79_win32\\chromedriver.exe");
         asosSite = new ASOSSite(chromeDriverConfig.getDriver());
 
         asosSite.asosHomepage().goToHomepage();
-       // asosSite.asosDresses().clickOnClothing().goToDresses().goToEveningDresses().selectDress().selectSize();
+        asosSite.asosDresses().clickOnClothing().goToDresses().goToEveningDresses().selectDress().selectSize().clickOnSize().addToBagButton();
 
 
 
